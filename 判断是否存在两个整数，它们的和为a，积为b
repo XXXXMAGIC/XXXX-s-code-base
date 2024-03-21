@@ -1,0 +1,29 @@
+# coding=utf-8
+
+# 导入math模块
+import math
+
+# 输入两个整数a和b
+a = int(input())
+b = int(input())
+
+# 请在此添加代码，要求判断是否存在两个整数，它们的和为a，积为b
+########## Begin ##########
+c=max(a,b)
+for m in range(1,c+1):
+    for n in range(1,c+1):
+        if (m+n)==a and (m*n)==b:
+            jieguo='Yes'
+            break
+        else:
+            jieguo='No'
+    if jieguo=='Yes':
+        break
+print(jieguo)
+
+
+
+
+########## End ##########
+
+
