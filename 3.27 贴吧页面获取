@@ -19,5 +19,5 @@ for i in range(page):
     'kw': word,'pn':i*50   
         }
     res=requests.get(url,headers=headers,params=params)
-    with open(f'{word}{i+1}.html','wb') as f:
+    with open(f'{word}{i+1}.html','wb') as f:  #第一个f相当于format函数
         f.write(res.content)
