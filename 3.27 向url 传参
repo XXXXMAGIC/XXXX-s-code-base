@@ -1,0 +1,29 @@
+# 3.27 url 传参
+from urllib.parse import quote, unquote
+import requests
+
+#quote 明文转密文
+#unquote 密文转明文
+#print(quote('好的'))
+#print(unquote('%E5%A5%AD%E7%9A%86'))
+#word=参数
+#https://www.baidu.com/from=844b/s?word=%E5%8F%82%E6%95%B0
+# url='https://www.baidu.com/'
+###########################################################
+#第一种：通过params携带字典
+#1.构建请求参数字典
+#2.发送请求时带上请求参数字典
+# headers={'User-Agent':'Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36 Edg/123.0.0.0'
+#     }
+# name=input('请输入关键字：' )
+# kw={'wd':'name'}
+# res2 = requests.get(url,headers = headers ,params=kw)
+# print(res2.content.decode())
+# ############################################################
+# # 第二种：对url进行操作
+# name=input('请输入关键字：' )
+# headers={'User-Agent':'Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36 Edg/123.0.0.0'
+#      }
+# url= 'https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd={name}'
+# res3 = requests.get(url,headers = headers )
+# print(res3.content.decode())
