@@ -1,0 +1,14 @@
+# 3.27 url 获取图片
+from urllib.parse import quote, unquote
+import requests
+#找到目标
+url = 'https://p1.music.126.net/K1ivT4WAM9kh-zdpE7_M5w==/109951169443549318.jpg?imageView&quality=89'
+#构建请求头字典
+headers={'User-Agent':'Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36 Edg/123.0.0.0'
+     }
+#发送请求获取响应
+res= requests.get(url,headers=headers)
+print(res.content) #二进制数据
+#保存图片
+with open ('网易云.jpg','wb') as f:
+    f.write(res.content)
