@@ -1,0 +1,3 @@
+#两者区别在于，content中间存的是字节码（二进制），而text中存的是Beautifulsoup根据猜测的编码方式将content内容编码成字符串。
+#encode 编码（unicode编码方式的字符串转化成相应编码方式的字节形式（二进制bytes类型））
+#decode 解码(将二进制bytes类型的数据按编码时的编码格式返回解码后unicode编码方式的字符串)
