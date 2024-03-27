@@ -1,0 +1,6 @@
+import requests
+url = "https://m10.music.126.net/20240327155718/ed344d9c3f2ac768a5c7f6c2f4573429/yyaac/obj/wonDkMOGw6XDiTHCmMOi/14055854047/d31d/0a87/5a01/1b9cb2b909682f09703924b1481a5ba2.m4a"
+headers={'User-Agent':'Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36 Edg/123.0.0.0'}
+res=requests.get(url,headers=headers)
+with open ('无名的人.mp4','wb') as f:
+    f.write(res.content)
