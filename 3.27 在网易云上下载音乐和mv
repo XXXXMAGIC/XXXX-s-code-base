@@ -4,3 +4,12 @@ headers={'User-Agent':'Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) 
 res=requests.get(url,headers=headers)
 with open ('无名的人.mp4','wb') as f:
     f.write(res.content)
+
+
+
+import requests
+url = "https://vodkgeyttp8.vod.126.net/cloudmusic/MyEwMCAwJCMjMDQjMDAwZA==/mv/235081/2334263285768797_1920x1080.mp4?wsSecret=fc7f534d30a787327ae2b3c42461714c&wsTime=1711539713"
+headers={'User-Agent':'Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36 Edg/123.0.0.0'}
+res=requests.get(url,headers=headers)
+with open ('kpopmv.mp4','wb') as f:
+    f.write(res.content)
