@@ -1,0 +1,7 @@
+import requests
+url = "https://tieba.baidu.com/f?ie=utf-8&kw=%E5%AD%99%E7%AC%91%E5%B7%9D"
+headers={'User-Agent':'Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36 Edg/123.0.0.0'}
+res=requests.get(url,headers=headers)
+# print(res.text)
+with open('孙笑川.html','wb') as f:
+    f.write(res.content)
