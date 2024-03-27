@@ -1,7 +1,7 @@
 # 3.27 url 传参
 from urllib.parse import quote, unquote
 import requests
-
+#字符串被当作url传参时，会自动进行url编码处理
 #quote 明文转密文
 #unquote 密文转明文
 #print(quote('好的'))
