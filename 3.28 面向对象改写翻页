@@ -1,0 +1,28 @@
+import requests
+class Tieba:
+    def  __init__(self):
+        self.url='https://tieba.baidu.com/f?'
+        self.headers={
+            'User-Agent':'Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36 Edg/123.0.0.0'
+            }
+        
+    def send(self,params):
+        res = requests.get(self.url,headers=self.headers,params=params)
+        return res.text
+    
+    def save(self,page,con):
+        with open(f'{page}.html','w',encoding='utf-8') as f:
+            f.write(con)
+
+    def run(self):
+        word = input('请输入贴吧名字： ')
+        pages = int(input('请输入页数：'))
+        for page in range(pages):
+            params={
+                'kw': word,
+                'pn':page*50   
+            }
+            data = self.send(params)
+            self.save(page,data)
+te = Tieba()
+te.run()
